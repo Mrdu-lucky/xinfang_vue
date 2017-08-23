@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  color: #333333;
+}
+
+input {
+  outline: none
+}
+
+body {
+  width: 100%;
+  border: 0;
+  position: relative;
+  min-width: 1200px;
+  overflow-x: hidden;
+}
+
+
+p,span,body, input, textarea, button {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif !important;
+}
+
+.fl {
+  float: left
+}
+
+.fr {
+  float: right
+}
+
+.clearFix {
+  zoom: 1;
+}
+
+.clearFix:after {
+  display: block;
+  clear: both;
+  content: '';
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+}
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/*地图模块baidumap*/
+.baidumapdiv div img {
+  width: 100%;
+}
+
+.baidumapdiv a[title="到百度地图查看此区域"] {
+  display: none;
+}
+/*滚动条*/
+::selection {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8391a5;
+  border-radius: 2px;
+}
+
+
+
+/*loading动画*/
+img[lazy="loaded"] + .imgloading {
+  display: none;
+}
+
+img + .imgloading {
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  min-height: 30px;
+  min-width: 30px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid transparent;
+  border-top-color: #0096FF;
+  border-radius: 50%;
+  animation: spin 0.8s ease infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/*新手指南*/
+#help .el-step__title {
+  position: relative;
+  left: -25px;
+  font-size: 16px;
+  width: 78px;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+}
+
+#help .el-carousel__button {
+  width: 50px;
+  height: 4px;
+  background-color: #8391a5;
+}
+
+#help .el-steps .el-step:last-child {
+  width: 78px !important;
+}
+
+
+/*首页home*/
+#homediv .el-carousel__button {
+  width: 60px;
+  height: 5px;
+}
+
+#homediv .el-carousel__item img {
+  position: absolute;
+  width: 1920px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#homediv .el-carousel__arrow {
+  font-size: 32px;
+  width: 60px;
+  height: 60px;
+}
+
+/*header*/
+.headerDiv .el-menu--horizontal .el-submenu > .el-menu {
+  padding: 0;
+}
+.headerDiv .el-submenu .el-menu-item{
+  min-width: 0;
+}
+.headerDiv .el-menu--horizontal .el-submenu .el-menu-item{
+  height: 44px;
+  line-height: 44px;
+}
+
+.headerDiv .el-menu--horizontal .el-submenu .el-button{
+  padding: 15px;
+  width: 100%;
+}
+.headerDiv .el-menu--horizontal.el-menu--dark .el-menu-item:hover, .el-menu--horizontal.el-menu--dark .el-submenu__title:hover {
+  background: none;
+}
+
+/*详情上半部分*/
+#detail .el-carousel__button {
+  width: 50px;
+  height: 4px;
+  background-color: #8391a5;
+}
+.el-carousel__arrow {
+  font-size: 28px;
+  width: 46px;
+  height: 46px;
+}
+.el-breadcrumb {
+  font-size: 15px;
+  line-height: 60px;
+  height: 60px;
+}
+/*详情子模块*/
+
+.detailcomponent{
+  min-height: 500px;
+  position: relative;
+}
+.detailcomponent .box-card {
+  margin: 50px 0;
+  padding: 0 20px;
+}
+
+.detailcomponent .box-card .text {
+  text-align: left;
+  padding: 20px;
+  border-bottom: 1px #2c3e50 dashed;
+
+}
+
+.detailcomponent .box-card .text p {
+  line-height: 2;
+  text-align: left;
+}
+
+.detailcomponent .box-card .text:last-child {
+  border: none;
+}
+
+.detailcomponent .el-card__header {
+  padding: 8px;
+}
+
+.detailcomponent .basemsg .text {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detailcomponent .basemsg .text li {
+  width: 50%;
+  padding: 0 20px 0 100px;
+  position: relative;
+  line-height: 40px;
+}
+
+.detailcomponent .basemsg .text li p {
+  line-height: 40px;
+  min-height: 40px;
+}
+
+.detailcomponent .basemsg .text h4 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.detailcomponent .text span,.detailcomponent .text p{
+  color: #2c3e50 !important;
+  font-size: 15px !important;
+}
+#dpic .box,#dpic .item,#dpic .el-card__body,#dpic .box-card{
+  padding: 0;
+}
+
+
+/*地图*/
+.tra-map {
+  height: 500px;
+  position: relative;
+}
+
+.tra-map .maplogo:hover {
+  animation-play-state: paused;
+}
+.BMapLib_SearchInfoWindow,.BMapLib_SearchInfoWindow *{
+  box-sizing: content-box;
+}
+.tra-map .maplogo {
+  border: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 50px;
+  width: auto;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  animation: updown 2s infinite;
+}
+.around.box-card.sandmap,.box-card.sandmap, .box-card.sandmap .el-card__body{
+  padding: 0;
+}
+.box-card.mapdiv .el-card__body {
+  padding: 0;
+}
+
+@keyframes updown {
+
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  30% {
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+.tra-map img {
+  width: 100%;
+}
+
+/*查看大图viewjs*/
+.viewer-container{
+  background-color: rgba(0,0,0,0.7);
+}
+.viewer-container .viewer-list>li{
+  width: 100px;
+  height: 100%;
+}
+.viewer-container .viewer-list{
+  height: 70px;
+}
+.viewer-container .viewer-footer{
+  bottom: 30px;
+}
+.viewer-container .viewer-button{
+  width: 100px;
+  height:100px;
+  font-size: 25px;
+}
+.viewer-container .viewer-button:before{
+  left: 25px;
+  bottom:25px;
+}
+/*--------------------------*/
