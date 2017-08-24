@@ -159,7 +159,7 @@
           this.data.imgPath = this.data.imgPath.reverse();
 
           let testStarred = this.user.collection;
-          if (testStarred && testStarred.length != 0) {
+          if (testStarred) {
             let collect = testStarred.find(item => item.id === this.data.base.id);
             if (collect) {
               this[Types.TRU_STA]()
